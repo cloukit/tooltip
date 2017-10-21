@@ -1,0 +1,32 @@
+{
+  "COMMENT": "THIS FILE WILL BE PARSED DURING BUILD. IT IS NOT THE ACTUAL PACKAGE FILE PUSHE TO NPMJS!",
+  "name": "@cloukit/tooltip",
+  "moduleId": "tooltip",
+  "version": "1.0.0",
+  "description": "A simple tooltip component",
+  "license": "MIT",
+  "author": "codelcou.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloukit/tooltip.git"
+  },
+  "scripts": {
+    "build": "node ./node_modules/@cloukit/library-build-chain/build.js",
+    "build:demo": "node ./node_modules/@cloukit/library-build-chain/build.js --demo --install",
+    "start:demo": "node ./node_modules/@cloukit/library-build-chain/build.js --demo --run",
+    "watch": "node ./node_modules/@cloukit/library-build-chain/build.js --watch",
+    "test": "echo \"ok\""
+  },
+  "dependencies": {
+    "@cloukit/dropout": "^1.0.1-alpha.6"
+  },
+  "devDependencies": {
+    "@cloukit/library-build-chain": "1.7.0"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=4.0.0",
+    "@angular/core": ">=4.0.0",
+    "rxjs": ">=5.0.0",
+    "zone.js": ">=0.8.0"
+  }
+}
