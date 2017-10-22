@@ -18,7 +18,8 @@
     "test": "echo \"ok\""
   },
   "dependencies": {
-    "@cloukit/dropout": "1.1.0"
+    "@cloukit/dropout": ">=1.1.0",
+    "@cloukit/theme": ">=1.6.1"
   },
   "devDependencies": {
     "@cloukit/library-build-chain": "1.7.1"

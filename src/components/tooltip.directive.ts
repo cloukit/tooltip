@@ -32,13 +32,18 @@ export class CloukitTooltipDirective {
     // PLACEMENT
     //
     let placement: DropoutPlacement;
+    let wrapperMargin: string;
     if (this.cloukitDropoutPlacement === undefined || this.cloukitDropoutPlacement === 'bottom') {
       placement = DropoutPlacement.DOWN_CENTER;
+      wrapperMargin = 'marginTop';
     } else if (this.cloukitDropoutPlacement === 'top') {
+      wrapperMargin = 'marginBottom';
       placement = DropoutPlacement.UP_CENTER;
     } else if (this.cloukitDropoutPlacement === 'left') {
+      wrapperMargin = 'marginRight';
       placement = DropoutPlacement.LEFT_CENTER;
     } else if (this.cloukitDropoutPlacement === 'right') {
+      wrapperMargin = 'marginLeft';
       placement = DropoutPlacement.RIGHT_CENTER;
     }
     //
@@ -48,6 +53,7 @@ export class CloukitTooltipDirective {
     const tooltipRef = this.viewContainerRef.createComponent(componentFactory);
     tooltipRef.instance.tooltipText = this.cloukitDropout;
     tooltipRef.instance.cloukitDropoutPlacement = placement;
+    tooltipRef.instance.wrapperMargin = wrapperMargin;
     //
     // REQUEST
     //

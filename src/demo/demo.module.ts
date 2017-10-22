@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DemoComponent } from './demo.component';
-import { CloukitTooltipModule } from '../index';
 import { CloukitDropoutModule } from '@cloukit/dropout';
+import { CloukitThemeModule } from '@cloukit/theme';
+import { CloukitTooltipModule } from '../index';
+import { DemoComponent } from './demo.component';
 
 @NgModule({
   declarations: [ DemoComponent ],
   exports: [ DemoComponent ],
-  imports: [ CommonModule, CloukitTooltipModule, CloukitDropoutModule ],
+  imports: [
+    CommonModule,
+    CloukitThemeModule,
+    CloukitTooltipModule,
+    CloukitDropoutModule,
+  ],
   providers: [ ],
   bootstrap: [ ]
 })
-export class DemoModule {
-}
+export class DemoModule {}

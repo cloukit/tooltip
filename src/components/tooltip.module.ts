@@ -5,14 +5,21 @@
  */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CloukitDropoutModule } from '@cloukit/dropout';
+import { CloukitThemeService } from '@cloukit/theme';
 import { CloukitTooltipDirective } from './tooltip.directive';
 import { CloukitTooltipComponent } from './children/tooltip.component';
+import { CloukitTooltipComponentThemeDefault } from './tooltip.theme';
 
 @NgModule({
-  imports: [ CommonModule, CloukitDropoutModule ],
+  imports: [ CommonModule ],
   exports: [ CloukitTooltipDirective ],
   declarations: [ CloukitTooltipDirective, CloukitTooltipComponent ],
   entryComponents: [ CloukitTooltipComponent ],
 })
-export class CloukitTooltipModule {}
+export class CloukitTooltipModule {
+  constructor(private themeService: CloukitThemeService) {
+    if (this.themeService.getComponentTheme('tooltip') === null) {
+      this.themeService.registerComponentTheme('tooltip', new CloukitTooltipComponentThemeDefault());
+    }
+  }
+}
