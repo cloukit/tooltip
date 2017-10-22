@@ -13,8 +13,8 @@ import { CloukitTooltipComponentThemeDefault } from '@cloukit/tooltip';
 export class MyRedToggleTheme extends CloukitTooltipComponentThemeDefault {
   constructor() {
     super();
-    const wrapper = this.getElementTheme('wrapper', 'ready', 'base');
-    wrapper.styleDef.style.backgroundColor = 'red';
+    const tooltip = this.getElementTheme('tooltip', 'ready', 'base');
+    tooltip.styleDef.style.backgroundColor = 'red';
   }
 }
 ```
