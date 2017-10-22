@@ -4,8 +4,8 @@
   "status": "EXPERIMENTAL",
   "versions": [
     {
-      "version": "1.0.1",
-      "hasTheme": false
+      "version": "1.1.0",
+      "hasTheme": true
     }
   ]
 }
