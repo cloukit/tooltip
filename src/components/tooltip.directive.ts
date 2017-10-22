@@ -18,7 +18,7 @@ export class CloukitTooltipDirective {
   cloukitDropout: string;
 
   @Input('cloukitTooltipPlacement')
-  cloukitDropoutPlacement: DropoutPlacement = DropoutPlacement.HORIZONTAL_LEFT_BOTTOM;
+  cloukitDropoutPlacement: string;
 
   private dropoutRef: DropoutComponentRefId;
 
@@ -28,13 +28,33 @@ export class CloukitTooltipDirective {
   }
 
   _doActivate() {
-    const request = new DropoutComponentCreationRequest();
+    //
+    // PLACEMENT
+    //
+    let placement: DropoutPlacement;
+    if (this.cloukitDropoutPlacement === undefined || this.cloukitDropoutPlacement === 'bottom') {
+      placement = DropoutPlacement.DOWN_CENTER;
+    } else if (this.cloukitDropoutPlacement === 'top') {
+      placement = DropoutPlacement.UP_CENTER;
+    } else if (this.cloukitDropoutPlacement === 'left') {
+      placement = DropoutPlacement.LEFT_CENTER;
+    } else if (this.cloukitDropoutPlacement === 'right') {
+      placement = DropoutPlacement.RIGHT_CENTER;
+    }
+    //
+    // TOOLTIP
+    //
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(CloukitTooltipComponent);
     const tooltipRef = this.viewContainerRef.createComponent(componentFactory);
     tooltipRef.instance.tooltipText = this.cloukitDropout;
+    tooltipRef.instance.cloukitDropoutPlacement = placement;
+    //
+    // REQUEST
+    //
+    const request = new DropoutComponentCreationRequest();
     request.triggerElement = this.viewContainerRef.element.nativeElement;
     request.template = tooltipRef.instance.tooltipTemplate;
-    request.placement = this.cloukitDropoutPlacement;
+    request.placement = placement;
     this.dropoutRef = this.dropoutService.requestDropoutCreation(request);
   }
 

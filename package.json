@@ -2,7 +2,7 @@
   "COMMENT": "THIS FILE WILL BE PARSED DURING BUILD. IT IS NOT THE ACTUAL PACKAGE FILE PUSHE TO NPMJS!",
   "name": "@cloukit/tooltip",
   "moduleId": "tooltip",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A simple tooltip component",
   "license": "MIT",
   "author": "codelcou.io",
@@ -18,10 +18,10 @@
     "test": "echo \"ok\""
   },
   "dependencies": {
-    "@cloukit/dropout": "1.0.2"
+    "@cloukit/dropout": "1.1.0"
   },
   "devDependencies": {
-    "@cloukit/library-build-chain": "1.7.0"
+    "@cloukit/library-build-chain": "1.7.1"
   },
   "peerDependencies": {
     "@angular/common": ">=4.0.0",

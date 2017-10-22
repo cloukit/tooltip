@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'demo',
   templateUrl: './demo.component.html',
   styles: [
-    '.demo { font-family:sans-serif; }',
-    '.tooltip { color:#710ECC; cursor: pointer; }',
+    '.tooltipTrigger { color:#710ECC; cursor: help; }',
+    '.label { display:inline-block; width:250px; }',
   ],
 })
 export class DemoComponent {
