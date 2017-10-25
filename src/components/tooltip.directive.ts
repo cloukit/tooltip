@@ -32,18 +32,18 @@ export class CloukitTooltipDirective {
     // PLACEMENT
     //
     let placement: DropoutPlacement;
-    let wrapperMargin: string;
+    let wrapperReadyModifier: string;
     if (this.cloukitDropoutPlacement === undefined || this.cloukitDropoutPlacement === 'bottom') {
       placement = DropoutPlacement.DOWN_CENTER;
-      wrapperMargin = 'marginTop';
+      wrapperReadyModifier = 'down';
     } else if (this.cloukitDropoutPlacement === 'top') {
-      wrapperMargin = 'marginBottom';
+      wrapperReadyModifier = 'up';
       placement = DropoutPlacement.UP_CENTER;
     } else if (this.cloukitDropoutPlacement === 'left') {
-      wrapperMargin = 'marginRight';
+      wrapperReadyModifier = 'left';
       placement = DropoutPlacement.LEFT_CENTER;
     } else if (this.cloukitDropoutPlacement === 'right') {
-      wrapperMargin = 'marginLeft';
+      wrapperReadyModifier = 'right';
       placement = DropoutPlacement.RIGHT_CENTER;
     }
     //
@@ -53,7 +53,7 @@ export class CloukitTooltipDirective {
     const tooltipRef = this.viewContainerRef.createComponent(componentFactory);
     tooltipRef.instance.tooltipText = this.cloukitDropout;
     tooltipRef.instance.cloukitDropoutPlacement = placement;
-    tooltipRef.instance.wrapperMargin = wrapperMargin;
+    tooltipRef.instance.wrapperReadyModifier = wrapperReadyModifier;
     //
     // REQUEST
     //
@@ -69,13 +69,11 @@ export class CloukitTooltipDirective {
     this.dropoutRef = undefined;
   }
 
-  @HostListener('focusin')
   @HostListener('mouseenter')
   activate() {
     this._doActivate();
   }
 
-  @HostListener('focusout')
   @HostListener('mouseleave')
   deactivate() {
     this._doDeactivate();

@@ -34,16 +34,21 @@ export class CloukitTooltipComponent implements OnInit {
   public cloukitDropoutPlacement: DropoutPlacement;
 
   @Input()
-  public wrapperMargin: string;
+  public wrapperReadyModifier: string;
 
   @Input()
   public theme: string;
 
   private themeSelected: CloukitComponentTheme;
   private state = {
-    uiModifier: 'base',
-    uiState: 'init',
-    tooltipTransform: '',
+    wrapper: {
+      uiModifier: 'base',
+      uiState: 'init',
+    },
+    tooltip: {
+      uiModifier: 'base',
+      uiState: 'init',
+    }
   };
 
   constructor(private themeService: CloukitThemeService) {
@@ -52,13 +57,7 @@ export class CloukitTooltipComponent implements OnInit {
 
   public getStyle(element: string): CloukitStatefulAndModifierAwareElementThemeStyleDefinition {
     if (this.themeSelected !== undefined && this.themeSelected !== null) {
-      const style = this.themeSelected.getStyle(element, this.state.uiState, this.state.uiModifier);
-      if (element === 'tooltip') {
-        style.style[ 'transform' ] = this.state.tooltipTransform;
-      }
-      if (element === 'wrapper') {
-        style.style[this.wrapperMargin] = this.state.uiState === 'ready' ? '5px' : '0px';
-      }
+      const style = this.themeSelected.getStyle(element, this.state[element].uiState, this.state[element].uiModifier);
       return this.themeService.prefixStyle(style);
     }
     return { style: {}, icon: {} } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition;
@@ -66,12 +65,6 @@ export class CloukitTooltipComponent implements OnInit {
 
   ngOnInit() {
     const self = this;
-    if (this.cloukitDropoutPlacement === DropoutPlacement.DOWN_CENTER || this.cloukitDropoutPlacement === DropoutPlacement.UP_CENTER ) {
-      this.state.tooltipTransform = 'translate(-50%, 0)';
-    }
-    if (this.cloukitDropoutPlacement === DropoutPlacement.LEFT_CENTER || this.cloukitDropoutPlacement === DropoutPlacement.RIGHT_CENTER ) {
-      this.state.tooltipTransform = 'translate(0, -50%)';
-    }
     if (this.theme !== undefined && this.theme !== null) {
       this.themeSelected = this.themeService.getComponentTheme(this.theme);
       if (this.themeSelected === null) {
@@ -79,9 +72,12 @@ export class CloukitTooltipComponent implements OnInit {
         this.themeSelected = this.themeService.getComponentTheme('tooltip');
       }
     }
-    // Transition to ready state once component is created
+
+    // Transition to ready state slightly after component is created
     setTimeout(() => {
-      self.state.uiState = 'ready';
+      self.state.tooltip.uiState = 'ready';
+      self.state.wrapper.uiState = 'ready';
+      self.state.wrapper.uiModifier = this.wrapperReadyModifier;
     }, 10)
   }
 
