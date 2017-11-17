@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
     '.label { display:inline-block; width:250px; }',
   ],
 })
-export class DemoComponent {}
+export class DemoComponent {
+  counter = 0;
+}

@@ -35,4 +35,13 @@
     cloukitTooltip="delicious german sausage"
     cloukitTooltipPlacement="bottom"
   >Bratwurst</button>
+  <br><br>
+  <span class="label">tooltip on a buton with click action:</span>
+  <a
+    href="#"
+    class="tooltipTrigger"
+    cloukitTooltip="delicious german sausage"
+    cloukitTooltipPlacement="bottom"
+    (click)="counter=counter+1"
+  >Bratwurst {{counter}}</a>
 </div>

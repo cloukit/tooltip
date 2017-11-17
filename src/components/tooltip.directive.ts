@@ -73,8 +73,9 @@ export class CloukitTooltipDirective {
   activate() {
     this._doActivate();
   }
-
+‚‚
   @HostListener('mouseleave')
+  @HostListener('click')
   deactivate() {
     this._doDeactivate();
   }
