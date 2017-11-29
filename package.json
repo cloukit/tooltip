@@ -22,7 +22,7 @@
     "@cloukit/theme": ">=1.6.1"
   },
   "devDependencies": {
-    "@cloukit/library-build-chain": "1.13.0",
+    "@cloukit/library-build-chain": "1.15.0",
     "@cloukit/story": "1.2.0"
   },
   "peerDependencies": {
