@@ -4,7 +4,7 @@
  * https://github.com/cloukit/legal
  */
 import {
-  Directive, Input, HostListener, ViewContainerRef, ComponentFactoryResolver,
+  Directive, Input, HostListener, ViewContainerRef, ComponentFactoryResolver, OnDestroy,
 } from '@angular/core';
 import { DropoutService, DropoutComponentCreationRequest, DropoutComponentRefId, DropoutPlacement } from '@cloukit/dropout';
 import { CloukitTooltipComponent } from './children/tooltip.component';
@@ -12,7 +12,7 @@ import { CloukitTooltipComponent } from './children/tooltip.component';
 @Directive({
   selector: '[cloukitTooltip]',
 })
-export class CloukitTooltipDirective {
+export class CloukitTooltipDirective implements OnDestroy {
 
   @Input('cloukitTooltip')
   cloukitDropout: string;
@@ -77,6 +77,10 @@ export class CloukitTooltipDirective {
   @HostListener('mouseleave')
   @HostListener('click')
   deactivate() {
+    this._doDeactivate();
+  }
+
+  ngOnDestroy() {
     this._doDeactivate();
   }
 }

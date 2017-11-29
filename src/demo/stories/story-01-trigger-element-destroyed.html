@@ -1,0 +1,18 @@
+<p>Click remove last item in 2sec, hover the last item and wait. The Tooltip should disappear once the item is removed.</p>
+<div style="padding:10px 0 10px 0;">
+  <button
+    class="superButton"
+    type="button"
+    [disabled]="items.length === 0"
+    (click)="removeLastItem()"
+  >remove last item in 2sec</button>
+  <button
+    class="superButtonSecondary"
+    type="button"
+    (click)="resetItems()"
+  >reset items</button>
+</div>
+<div *ngFor="let item of items" class="item">
+  <span class="tooltipTrigger" cloukitTooltip="foobar" cloukitTooltipPlacement="right">{{item}}</span>
+</div>
+
