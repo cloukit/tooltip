@@ -6,7 +6,7 @@
 import {
   Directive, Input, HostListener, ViewContainerRef, ComponentFactoryResolver, OnDestroy,
 } from '@angular/core';
-import { DropoutService, DropoutComponentCreationRequest, DropoutComponentRefId, DropoutPlacement } from '@cloukit/dropout';
+import { CloukitDropoutService, DropoutComponentCreationRequest, DropoutComponentRefId, DropoutPlacement } from '@cloukit/dropout';
 import { CloukitTooltipComponent } from './children/tooltip.component';
 
 @Directive({
@@ -22,7 +22,7 @@ export class CloukitTooltipDirective implements OnDestroy {
 
   private dropoutRef: DropoutComponentRefId;
 
-  constructor(private dropoutService: DropoutService,
+  constructor(private dropoutService: CloukitDropoutService,
               private viewContainerRef: ViewContainerRef,
               private componentFactoryResolver: ComponentFactoryResolver) {
   }
