@@ -3,6 +3,11 @@ This graphic shows you all elements with their states and modifiers.
 
 cloukitSvg:https://cloukit.github.io/tooltip/themeing/cloukit-tooltip-decomposed.svg
 
+
+Note: Right after tooltip creation the UI State changes from init to ready. Additionally the UI Modifier of wrapper changes
+depending on the orientation.
+
+
 Below you can see the theme provided by tooltip. You can easily extend one of the existing themes and change it to your needs. But do not forget to register it at the [`cloukitThemeService`](https://cloukit.github.io/#/guide/themeing).
 
 A new theme with a red background would be created like so:
