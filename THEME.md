@@ -1,7 +1,7 @@
 To be able to write a custom theme you need to know about the elements, uiStates and uiModifiers.
 This graphic shows you all elements with their states and modifiers.
 
-cloukitSvg:https://cloukit.github.io/tooltip/themeing/cloukit-tooltip-decomposed.svg
+cloukitSvg:https://cloukit.github.io/tooltip/themeing/cloukit-tooltip-decomposed.svg?v2
 
 &nbsp;
 
