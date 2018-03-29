@@ -3,7 +3,13 @@
 
 ### Initial Setup
 
-Import the needed modules in your main module.
+First of all you need to define the [**`cloukit-dropout-outlet`**](https://cloukit.github.io/#/component/dropout) and in your main Bootstrap Component's template like so. Make sure you only define this once at the top level of your component hierarchy.
+
+```html
+<cloukit-dropout-outlet></cloukit-dropout-outlet>
+```
+
+Then import the needed modules in your main module.
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -31,8 +37,6 @@ import { CloukitTooltipModule } from '@cloukit/tooltip';
 })
 // ....
 ```
-
-**IMPORTANT:** Do not forget to place [**`cloukit-dropout-outlet`**](https://cloukit.github.io/#/component/dropout) in your `AppComponent`. 
 
 
 &nbsp;
