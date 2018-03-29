@@ -1,0 +1,95 @@
+<svg width="705" height="770" xmlns="http://www.w3.org/2000/svg" style="background:#fff">
+  <g fill="none" fill-rule="evenodd">
+    <path stroke="#777" d="M15.5 17.329h676V755.5h-676z"/>
+    <g fill="#710ECC" font-family="SourceSansPro-Light, Source Sans Pro" font-weight="300">
+      <text font-size="20" letter-spacing=".333" transform="translate(34 37)">
+        <tspan x="260" y="122">UI State</tspan>
+      </text>
+      <text font-size="20" letter-spacing=".333" transform="translate(34 37)">
+        <tspan x="494" y="122">UI Modifier</tspan>
+      </text>
+      <text font-size="30" letter-spacing=".33" transform="translate(34 37)">
+        <tspan x="0" y="30">Tooltip Component UI States and UI Modifiers</tspan>
+      </text>
+      <text font-size="20" letter-spacing=".333" transform="translate(34 37)">
+        <tspan x="74" y="122">Element</tspan>
+      </text>
+    </g>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="66" y="314">tooltip</tspan>
+    </text>
+    <text font-family="SourceSansPro-Regular, Source Sans Pro" font-size="20" letter-spacing=".333" fill="#F1F2F2" transform="translate(46 192)">
+      <tspan x="582" y="347">…</tspan>
+    </text>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="251" y="281">init</tspan>
+    </text>
+    <path d="M511.5 467.753h-119M392.5 533.5h120" stroke="#710ECC" stroke-linecap="square"/>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="251" y="346">ready</tspan>
+    </text>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="482" y="348">base</tspan>
+    </text>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="482" y="282">base</tspan>
+    </text>
+    <g stroke="#710ECC" stroke-linecap="square">
+      <path d="M198 499.5h25.188M285.688 532.5l-62.5-33"/>
+    </g>
+    <path d="M285.5 467L223 500" stroke="#710ECC" stroke-linecap="square"/>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="66" y="53">wrapper</tspan>
+    </text>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="251" y="20">init</tspan>
+    </text>
+    <path d="M511.5 206.753h-119" stroke="#710ECC" stroke-linecap="square"/>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="251" y="85">ready</tspan>
+    </text>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="482" y="87">up</tspan>
+    </text>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="482" y="21">base</tspan>
+    </text>
+    <g stroke="#710ECC" stroke-linecap="square">
+      <path d="M198 238.5h25.188M285.688 271.5l-62.5-33"/>
+    </g>
+    <path d="M285.5 206L223 239" stroke="#710ECC" stroke-linecap="square"/>
+    <path fill="#4C4C4C" d="M46 491h49v25H46z"/>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="18" font-weight="300" letter-spacing=".22" fill="#FFF" transform="translate(46 192)">
+      <tspan x="15" y="317">…</tspan>
+    </text>
+    <path fill="#4C4C4C" d="M599 456h49v25h-49z"/>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="18" font-weight="300" letter-spacing=".22" fill="#FFF" transform="translate(46 192)">
+      <tspan x="568" y="282">…</tspan>
+    </text>
+    <path fill="#4C4C4C" d="M599 519h49v25h-49z"/>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="18" font-weight="300" letter-spacing=".22" fill="#FFF" transform="translate(46 192)">
+      <tspan x="568" y="345">…</tspan>
+    </text>
+    <path stroke="#710ECC" d="M46.5 226.5h48v24h-48z"/>
+    <path stroke="#710ECC" d="M46.5 226.5h48v24h-48zM599.5 194.5h48v24h-48zM599.5 263.5h48v24h-48z"/>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".244" fill="#710ECC" transform="translate(46 192)">
+      <tspan x="55" y="452">Right after tooltip creation the UI State changes from init to ready. </tspan> <tspan x="55" y="482">Additionally the UI Modifier of wrapper changes depending on the </tspan> <tspan x="55" y="512">orientation.</tspan>
+    </text>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="482" y="129">down</tspan>
+    </text>
+    <path stroke="#710ECC" d="M599.5 305.5h48v24h-48z"/>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="482" y="171">left</tspan>
+    </text>
+    <path stroke="#710ECC" d="M599.5 347.5h48v24h-48z"/>
+    <text font-family="SourceSansPro-Light, Source Sans Pro" font-size="20" font-weight="300" letter-spacing=".333" fill="#777" transform="translate(46 192)">
+      <tspan x="482" y="214">right</tspan>
+    </text>
+    <path stroke="#710ECC" d="M599.5 390.5h48v24h-48z"/>
+    <path d="M392.5 272.5h120M392.5 272.5l121 42M392.5 272.5l121 84M392.5 272.5l122 128" stroke="#710ECC" stroke-linecap="square"/>
+    <text font-family="SourceSansPro-Regular, Source Sans Pro" font-size="20" letter-spacing=".244" fill="#710ECC" transform="translate(46 192)">
+      <tspan x="1" y="452">Note</tspan>
+    </text>
+  </g>
+</svg>
