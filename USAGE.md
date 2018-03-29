@@ -53,15 +53,7 @@ You can create a tooltip as easy as so
 
 &nbsp;
 
-### How it works
 
-cloukitSvg:https://cloukit.github.io/dropout/doc/cloukit-dropout-how-it-works.svg
-
-
-Why do it that way? I am aware of the possibility to get the `rootElement` via the `ApplicationRef`, 
-but this is in my opinion a hacky way of doing things that could potentially break and that is why we use the outlet to do it in a well documented way.
-
-&nbsp;
 
 ### Version Compatibility
 
