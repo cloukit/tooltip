@@ -51,3 +51,32 @@ You can create a tooltip as easy as so
 
 
 
+&nbsp;
+
+### How it works
+
+cloukitSvg:https://cloukit.github.io/dropout/doc/cloukit-dropout-how-it-works.svg
+
+
+Why do it that way? I am aware of the possibility to get the `rootElement` via the `ApplicationRef`, 
+but this is in my opinion a hacky way of doing things that could potentially break and that is why we use the outlet to do it in a well documented way.
+
+&nbsp;
+
+### Version Compatibility
+
+You can read the [release comments](https://github.com/cloukit/tooltip/releases) for full details.
+
+Please mind the the compatibility chart
+
+| Angular Version | Cloukit Component Version |
+|-----------------|---------------------------|
+| >=5.0.0         | 1.6.0 - current           |
+| >=4.0.0         | 1.0.0 - 1.5.0             |
+
+To install a specific version use:
+
+```
+yarn add @cloukit/tooltip@1.5.5
+```
+
