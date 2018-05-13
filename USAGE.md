@@ -4,7 +4,7 @@
 ### Initial Setup
 
 ```
-yarn add @cloukit/dropout @cloukit&theme
+yarn add @cloukit/dropout @cloukit/theme
 ```
 
 First of all you need to define the [**`cloukit-dropout-outlet`**](https://cloukit.github.io/#/component/dropout) and in your main Bootstrap Component's template like so. Make sure you only define this once at the top level of your component hierarchy.
