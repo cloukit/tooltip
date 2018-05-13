@@ -3,17 +3,19 @@
 
 ### Initial Setup
 
+First install needed peerDependencies.
+
 ```
 yarn add @cloukit/dropout @cloukit/theme
 ```
 
-First of all you need to define the [**`cloukit-dropout-outlet`**](https://cloukit.github.io/#/component/dropout) and in your main Bootstrap Component's template like so. Make sure you only define this once at the top level of your component hierarchy.
+Secondly you need to define the [**`cloukit-dropout-outlet`**](https://cloukit.github.io/#/component/dropout) and in your main Bootstrap Component's template like so. Make sure you only define this once at the top level of your component hierarchy.
 
 ```html
 <cloukit-dropout-outlet></cloukit-dropout-outlet>
 ```
 
-Then import the needed modules in your main module.
+Lastly import the needed modules in your main module.
 
 ```typescript
 import { NgModule } from '@angular/core';
