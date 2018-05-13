@@ -30,8 +30,8 @@ export class CloukitTooltipComponent implements OnInit {
   @ViewChild('tooltip')
   public tooltipTemplate: TemplateRef<any>;
 
-  @Input('cloukitTooltipPlacement')
-  public cloukitDropoutPlacement: DropoutPlacement;
+  @Input()
+  public cloukitTooltipPlacement: DropoutPlacement;
 
   @Input()
   public wrapperReadyModifier: string;
@@ -78,7 +78,7 @@ export class CloukitTooltipComponent implements OnInit {
       self.state.tooltip.uiState = 'ready';
       self.state.wrapper.uiState = 'ready';
       self.state.wrapper.uiModifier = this.wrapperReadyModifier;
-    }, 10)
+    }, 10);
   }
 
 }

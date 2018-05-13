@@ -7,7 +7,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CloukitThemeService } from '@cloukit/theme';
 import { CloukitTooltipDirective } from './tooltip.directive';
-import { CloukitTooltipComponent } from './children/tooltip.component';
+import { CloukitTooltipComponent } from './tooltip.component';
 import { CloukitTooltipComponentThemeDefault } from './tooltip.theme';
 
 @NgModule({

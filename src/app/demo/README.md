@@ -6,9 +6,7 @@ Clone the demo and run it with [yarn](https://yarnpkg.com/en/).
 git clone https://github.com/cloukit/tooltip.git
 cd tooltip
 yarn
-yarn build
-yarn build:demo
-yarn start:demo
+yarn start
 ```
 
 Go to http://localhost:4200/

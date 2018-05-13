@@ -7,18 +7,18 @@ import {
   Directive, Input, HostListener, ViewContainerRef, ComponentFactoryResolver, OnDestroy,
 } from '@angular/core';
 import { CloukitDropoutService, DropoutComponentCreationRequest, DropoutComponentRefId, DropoutPlacement } from '@cloukit/dropout';
-import { CloukitTooltipComponent } from './children/tooltip.component';
+import { CloukitTooltipComponent } from './tooltip.component';
 
 @Directive({
   selector: '[cloukitTooltip]',
 })
 export class CloukitTooltipDirective implements OnDestroy {
 
-  @Input('cloukitTooltip')
-  cloukitDropout: string;
+  @Input()
+  public cloukitTooltip: string;
 
-  @Input('cloukitTooltipPlacement')
-  cloukitDropoutPlacement: string;
+  @Input()
+  public cloukitTooltipPlacement: string;
 
   private dropoutRef: DropoutComponentRefId;
 
@@ -33,16 +33,16 @@ export class CloukitTooltipDirective implements OnDestroy {
     //
     let placement: DropoutPlacement;
     let wrapperReadyModifier: string;
-    if (this.cloukitDropoutPlacement === undefined || this.cloukitDropoutPlacement === 'bottom') {
+    if (this.cloukitTooltipPlacement === undefined || this.cloukitTooltipPlacement === 'bottom') {
       placement = DropoutPlacement.DOWN_CENTER;
       wrapperReadyModifier = 'down';
-    } else if (this.cloukitDropoutPlacement === 'top') {
+    } else if (this.cloukitTooltipPlacement === 'top') {
       wrapperReadyModifier = 'up';
       placement = DropoutPlacement.UP_CENTER;
-    } else if (this.cloukitDropoutPlacement === 'left') {
+    } else if (this.cloukitTooltipPlacement === 'left') {
       wrapperReadyModifier = 'left';
       placement = DropoutPlacement.LEFT_CENTER;
-    } else if (this.cloukitDropoutPlacement === 'right') {
+    } else if (this.cloukitTooltipPlacement === 'right') {
       wrapperReadyModifier = 'right';
       placement = DropoutPlacement.RIGHT_CENTER;
     }
@@ -51,8 +51,8 @@ export class CloukitTooltipDirective implements OnDestroy {
     //
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(CloukitTooltipComponent);
     const tooltipRef = this.viewContainerRef.createComponent(componentFactory);
-    tooltipRef.instance.tooltipText = this.cloukitDropout;
-    tooltipRef.instance.cloukitDropoutPlacement = placement;
+    tooltipRef.instance.tooltipText = this.cloukitTooltip;
+    tooltipRef.instance.cloukitTooltipPlacement = placement;
     tooltipRef.instance.wrapperReadyModifier = wrapperReadyModifier;
     //
     // REQUEST
