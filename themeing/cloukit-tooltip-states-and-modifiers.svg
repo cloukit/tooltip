@@ -1,4 +1,12 @@
+<!--
+  * @license MIT
+  * Copyright (c) 2017 Bernhard Grünewaldt - codeclou.io
+  * https://github.com/cloukit/legal
+-->
 <svg width="705" height="770" viewBox="0 0 705 770" xmlns="http://www.w3.org/2000/svg" style="background:#fff">
+  <defs>
+    <style type="text/css">@import url(https://cloukit.github.io/cdn-static/css/webfonts.css);</style>
+  </defs>
   <g fill="none" fill-rule="evenodd">
     <path stroke="#777" d="M15.5 17.329h676V755.5h-676z"/>
     <g fill="#710ECC" font-family="SourceSansPro-Light, Source Sans Pro" font-weight="300">
