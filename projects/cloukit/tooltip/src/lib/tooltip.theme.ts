@@ -3,10 +3,7 @@
  * Copyright (c) 2017 Bernhard Grünewaldt - codeclou.io
  * https://github.com/cloukit/legal
  */
-import {
-  CloukitComponentTheme,
-  CloukitStatefulAndModifierAwareElementThemeStyleDefinition,
-} from '@cloukit/theme';
+import { CloukitComponentTheme } from '@cloukit/theme';
 
 /**
  * The default theme
@@ -28,7 +25,7 @@ export class CloukitTooltipComponentThemeDefault extends CloukitComponentTheme {
           opacity 300ms ease-in-out`,
         opacity: 0,
       }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
+    });
 
     this.createStyle('wrapper', 'ready', 'left',
       this.merge(this.getStyle('wrapper', 'init', 'base'), {
@@ -37,7 +34,7 @@ export class CloukitTooltipComponentThemeDefault extends CloukitComponentTheme {
           transform: 'translate(0, -50%)',
           opacity: 1,
         }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+      }));
 
     this.createStyle('wrapper', 'ready', 'right',
       this.merge(this.getStyle('wrapper', 'init', 'base'), {
@@ -46,7 +43,7 @@ export class CloukitTooltipComponentThemeDefault extends CloukitComponentTheme {
           transform: 'translate(0, -50%)',
           opacity: 1,
         }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+      }));
 
     this.createStyle('wrapper', 'ready', 'up',
       this.merge(this.getStyle('wrapper', 'init', 'base'), {
@@ -55,7 +52,7 @@ export class CloukitTooltipComponentThemeDefault extends CloukitComponentTheme {
           transform: 'translate(-50%, 0)',
           opacity: 1,
         }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+      }));
 
     this.createStyle('wrapper', 'ready', 'down',
       this.merge(this.getStyle('wrapper', 'init', 'base'), {
@@ -64,7 +61,7 @@ export class CloukitTooltipComponentThemeDefault extends CloukitComponentTheme {
           transform: 'translate(-50%, 0)',
           opacity: 1,
         }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+      }));
 
     //
     // TOOLTIP
@@ -75,13 +72,13 @@ export class CloukitTooltipComponentThemeDefault extends CloukitComponentTheme {
         padding: '5px 8px 5px 8px',
         color: '#fff',
       }
-    } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition);
+    });
 
     this.createStyle('tooltip', 'ready', 'base',
       this.merge(this.getStyle('tooltip', 'init', 'base'), {
         style: {
         }
-      } as CloukitStatefulAndModifierAwareElementThemeStyleDefinition));
+      }));
   }
 
 }
