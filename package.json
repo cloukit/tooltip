@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@cloukit/theme": "7.0.1",
+    "@cloukit/theme": "7.1.1",
     "@cloukit/dropout": "7.0.0",
     "@cloukit/story": "7.0.0",
     "@types/prismjs": "1.9.0",

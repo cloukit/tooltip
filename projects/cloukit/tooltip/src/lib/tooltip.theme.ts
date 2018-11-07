@@ -3,7 +3,7 @@
  * Copyright (c) 2017 Bernhard Grünewaldt - codeclou.io
  * https://github.com/cloukit/legal
  */
-import { CloukitComponentTheme } from '@cloukit/theme';
+import { CloukitBaseCssDefinitions, CloukitComponentTheme } from '@cloukit/theme';
 
 /**
  * The default theme
@@ -15,8 +15,8 @@ export class CloukitTooltipComponentThemeDefault extends CloukitComponentTheme {
     //
     // WRAPPER
     //
-    this.createStyle('wrapper', 'init', 'base', {
-      style: {
+    this.buildStyle('wrapper', 'init', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
         transition: `
           margin-left 300ms linear,
           margin-right 300ms linear,
@@ -24,61 +24,52 @@ export class CloukitTooltipComponentThemeDefault extends CloukitComponentTheme {
           margin-bottom 300ms linear,
           opacity 300ms ease-in-out`,
         opacity: 0,
-      }
-    });
+      });
 
-    this.createStyle('wrapper', 'ready', 'left',
-      this.merge(this.getStyle('wrapper', 'init', 'base'), {
-        style: {
-          marginRight: '5px',
-          transform: 'translate(0, -50%)',
-          opacity: 1,
-        }
-      }));
+    this.buildStyle('wrapper', 'ready', 'left')
+      .inheritFrom('wrapper', 'init', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        marginRight: '5px',
+        transform: 'translate(0, -50%)',
+        opacity: 1,
+      });
 
-    this.createStyle('wrapper', 'ready', 'right',
-      this.merge(this.getStyle('wrapper', 'init', 'base'), {
-        style: {
-          marginLeft: '5px',
-          transform: 'translate(0, -50%)',
-          opacity: 1,
-        }
-      }));
+    this.buildStyle('wrapper', 'ready', 'right')
+      .inheritFrom('wrapper', 'init', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        marginLeft: '5px',
+        transform: 'translate(0, -50%)',
+        opacity: 1,
+      });
 
-    this.createStyle('wrapper', 'ready', 'up',
-      this.merge(this.getStyle('wrapper', 'init', 'base'), {
-        style: {
-          marginBottom: '5px',
-          transform: 'translate(-50%, 0)',
-          opacity: 1,
-        }
-      }));
+    this.buildStyle('wrapper', 'ready', 'up')
+      .inheritFrom('wrapper', 'init', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        marginBottom: '5px',
+        transform: 'translate(-50%, 0)',
+        opacity: 1,
+      });
 
-    this.createStyle('wrapper', 'ready', 'down',
-      this.merge(this.getStyle('wrapper', 'init', 'base'), {
-        style: {
-          marginTop: '5px',
-          transform: 'translate(-50%, 0)',
-          opacity: 1,
-        }
-      }));
+    this.buildStyle('wrapper', 'ready', 'down')
+      .inheritFrom('wrapper', 'init', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
+        marginTop: '5px',
+        transform: 'translate(-50%, 0)',
+        opacity: 1,
+      });
 
     //
     // TOOLTIP
     //
-    this.createStyle('tooltip', 'init', 'base', {
-      style: {
+    this.buildStyle('tooltip', 'init', 'base')
+      .withStyles(<CloukitBaseCssDefinitions>{
         backgroundColor: '#333',
         padding: '5px 8px 5px 8px',
         color: '#fff',
-      }
-    });
+      });
 
-    this.createStyle('tooltip', 'ready', 'base',
-      this.merge(this.getStyle('tooltip', 'init', 'base'), {
-        style: {
-        }
-      }));
+    this.buildStyle('tooltip', 'ready', 'base')
+      .inheritFrom('tooltip', 'init', 'base');
   }
 
 }

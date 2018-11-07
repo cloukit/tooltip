@@ -283,9 +283,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@cloukit/theme@7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@cloukit/theme/-/theme-7.0.1.tgz#f1571c661fcf16fa92e350c3c4c619127b8e2660"
+"@cloukit/theme@7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@cloukit/theme/-/theme-7.1.1.tgz#4f8ead2c1fef605bd5c1ace28e21b5dd07cda07e"
   dependencies:
     tslib "^1.9.0"
 
